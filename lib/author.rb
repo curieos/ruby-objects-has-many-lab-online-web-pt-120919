@@ -29,7 +29,7 @@ class Author
   
   def self.post_count()
     count = 0
-    @@all.each do |author|
+    @@all.map() do |author|
       count += author.posts.length()
     end
     count
