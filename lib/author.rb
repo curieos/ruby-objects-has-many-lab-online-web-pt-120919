@@ -26,4 +26,12 @@ class Author
     post = Post.new(title)
     add_post(post)
   end
+  
+  def self.post_count()
+    count = 0
+    @@all.each do |author|
+      puts author.posts.length()
+    end
+    count
+  end
 end
