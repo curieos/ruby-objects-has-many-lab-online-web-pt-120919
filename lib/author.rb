@@ -7,7 +7,6 @@ class Author
     @name = name
     @posts = []
     save
-    puts name
   end
   
   def save
