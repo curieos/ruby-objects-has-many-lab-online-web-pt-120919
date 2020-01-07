@@ -20,7 +20,7 @@ class Author
     add_post(post)
   end
   
-  def self.song_count
-    Song.all.length()
+  def self.post
+    Post.all.length()
   end
 end
