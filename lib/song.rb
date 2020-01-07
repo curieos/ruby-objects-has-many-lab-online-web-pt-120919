@@ -1,9 +1,16 @@
 class Song 
   attr_accessor :name
   
+  @@all = []
+  
   def initialize(name)
     @name = name
     @artist = nil
+    save
+  end
+  
+  def save
+    @@all << self
   end
   
   def artist
@@ -21,5 +28,9 @@ class Song
     else
       nil
     end
+  end
+  
+  def self.all
+    @@all
   end
 end
