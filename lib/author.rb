@@ -1,16 +1,9 @@
 class Author 
   attr_accessor :name
   
-  @@all = []
-  
   def initialize(name)
     @name = name
     @posts = []
-    save
-  end
-  
-  def save
-    @@all << self
   end
   
   def add_post(post)
@@ -27,11 +20,7 @@ class Author
     add_post(post)
   end
   
-  def self.post_count()
-    count = 0
-    @@all.each do |author|
-      count += author.posts.length()
-    end
-    count
+  def self.song_count
+    Song.all.length()
   end
 end
